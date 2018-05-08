@@ -18,7 +18,7 @@
   },
   "scripts": {
     "deploy": "gcloud app deploy",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "lint": "repo-tools lint",
     "pretest": "npm run lint",
     "system-test": "repo-tools test app",
@@ -26,9 +26,15 @@
     "e2e-test": "repo-tools test deploy"
   },
   "dependencies": {
-    "express": "4.16.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "jayson": "^2.0.6",
+    "jsonwebtoken": "^8.2.1",
+    "underscore": "^1.9.0"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "2.2.1"
+    "@google-cloud/nodejs-repo-tools": "2.2.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.4"
   }
 }
